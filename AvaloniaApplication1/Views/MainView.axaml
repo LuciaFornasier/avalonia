@@ -14,15 +14,15 @@
     <StackPanel
         >
        
-        <TextBlock Text="{Binding Name} "
+        <TextBlock Text="{Binding Benvenuto} "
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"/>
-        <TextBox Text="{Binding Benvenuto}"
+        <TextBox Text="{Binding Name}"
                  HorizontalAlignment="Center"
                  VerticalAlignment="Center" />
         <Button 
                 Command="{Binding Login}"
-                Content="{Binding Status}"
+                Content="{Binding StatusLogin}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"/>
     </StackPanel>

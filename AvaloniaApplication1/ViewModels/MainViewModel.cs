@@ -4,18 +4,20 @@ using CommunityToolkit.Mvvm.Input;
 namespace AvaloniaApplication1.ViewModels;
 
 public partial class MainViewModel : ViewModelBase
-{
-    public string Benvenuto { get; set; } = "Benvenuto";
+{ 
+    [ObservableProperty] public partial string Benvenuto { get; set; } = "Benvenuto";
+   
     private bool logged;
-    [ObservableProperty] public partial string Name { get; set; } = "";
+    
+    [ObservableProperty]  public partial string Name { get; set; } = "";
     public string StatusLogin => logged ? "Logout" : "Login";
     
 
     [RelayCommand]
-    private void Login()
+    public void Login()
     {
         logged = !logged;
         Benvenuto = logged ? $"Benvenuto/a {Name}" : $"Arrivederci {Name}";
-        OnPropertyChanged(nameof(Benvenuto));
+        OnPropertyChanged(nameof(StatusLogin));
     }
 }
