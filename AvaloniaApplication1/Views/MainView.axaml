@@ -14,17 +14,23 @@
     <StackPanel
         >
        
-        <TextBlock Text="{Binding Benvenuto} "
+        <TextBlock Text="{Binding Benvenuto}"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
-        <TextBox Text="{Binding Name}"
-                 HorizontalAlignment="Center"
-                 VerticalAlignment="Center" />
-        <Button 
-                Command="{Binding Login}"
+                   TextAlignment="Center"/>
+        
+        <TextBox Text="{Binding Password}"
+                 PasswordChar="§"
+                 Watermark="Inserisci Password"/>
+        <TextBlock Text="Seleziona un nome dalla lista:" FontSize="12" Foreground="Gray"/>
+        <ListBox ItemsSource="{Binding Nomi}" 
+                 SelectedItem="{Binding NomeSelezionato}"
+                 />
+        
+        <Button Command="{Binding LoginCommand}"
                 Content="{Binding StatusLogin}"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"/>
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"/>
+
     </StackPanel>
     
 </UserControl>
