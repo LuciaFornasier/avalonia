@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace AvaloniaApplication1.ViewModels;
 
-public partial class MainViewModel : ViewModelBase
+public partial class  MainViewModel : ViewModelBase
 { 
     [ObservableProperty] public partial string Benvenuto { get; set; } = "Benvenuto";
    
@@ -11,7 +11,7 @@ public partial class MainViewModel : ViewModelBase
     
     [ObservableProperty]  public partial string Name { get; set; } = "";
     public string StatusLogin => logged ? "Logout" : "Login";
-    
+     
 
     [RelayCommand]
     public void Login()
